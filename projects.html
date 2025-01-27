@@ -7,7 +7,6 @@
 <html>
   <head>
     <title>Amrutha Manoharan</title>
-    <link rel="icon" type="images/x-icon" href="images/favicon.ico">
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -55,6 +54,9 @@
 
       <!-- Main -->
       <div id="main">
+        <header class="major">
+          <h2>Projects</h2>
+        </header>
         <!-- Posts-->
         <section class="posts">
           <!--Business Insight 360-start-->
@@ -75,8 +77,10 @@
               ><img src="images/business_360.jpg" alt=""
             /></a>
             <p>
-              A Power BI project delivering actionable insights across key business functions, 
-		    showcasing data-driven decision-making through interactive dashboards, designed to solve real-world business challenges.
+              A Power BI project delivering actionable insights across key
+              business functions, showcasing data-driven decision-making through
+              interactive dashboards, designed to solve real-world business
+              challenges.
             </p>
             <ul class="actions special">
               <li>
@@ -127,7 +131,7 @@
           <!--Cyclistic Bike-Share Analysis-end-->
 
           <!--AtliQ Grands Data Analysis Using Python-start-->
-          <article>
+          <article id="scroll">
             <header>
               <h2>
                 <a
@@ -230,6 +234,35 @@
           <!--Sales and Financial Insights: AtliQ Hardwares-end-->
           <article></article>
         </section>
+
+        <!--scroll up arrow-->
+        <footer id="footer">
+          <div>
+            <ul
+              id="scrollButton"
+              class="actions"
+              style="
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: none; /* Hidden by default */
+                color: bisque;
+              "
+            >
+              <li>
+                <a
+                  href="#header"
+                  class="button icon solid solo fa-arrow-up scrolly"
+                  >Continue</a
+                >
+              </li>
+            </ul>
+          </div>
+        </footer>
       </div>
 
       <!-- Copyright -->
@@ -249,5 +282,19 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <!--for scroll up button-->
+    <script>
+      document.addEventListener("scroll", function () {
+        const skillsSection = document.getElementById("scroll");
+        const scrollButton = document.getElementById("scrollButton");
+        const skillsOffset = skillsSection.offsetTop;
+
+        if (window.scrollY >= skillsOffset) {
+          scrollButton.style.display = "block"; // Show the button
+        } else {
+          scrollButton.style.display = "none"; // Hide the button
+        }
+      });
+    </script>
   </body>
 </html>

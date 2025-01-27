@@ -7,7 +7,6 @@
 <html>
   <head>
     <title>Amrutha Manoharan</title>
-    <link rel="icon" type="images/x-icon" href="images/favicon.ico">
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -55,6 +54,9 @@
 
       <!-- Main -->
       <div id="main">
+        <header class="major">
+          <h2>Awards & Certificates</h2>
+        </header>
         <!-- Posts-->
         <section class="posts">
           <!--Python: Beginner to Advanced For Data Professionals-start-->
@@ -103,7 +105,7 @@
           <!--SQL Beginner to Advanced For Data Professionals-end-->
 
           <!--Get Job Ready: Power BI Data Analytics for All Levels 3.0-start-->
-          <article>
+          <article id="scroll">
             <header>
               <h3>
                 <a
@@ -283,6 +285,33 @@
           </article>
           <!--SQL (Intermediate) Certificate-end-->
         </section>
+        <!--scroll up arrow-->
+        <footer id="footer">
+          <div>
+            <ul
+              id="scrollButton"
+              class="actions"
+              style="
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: none; /* Hidden by default */
+              "
+            >
+              <li>
+                <a
+                  href="#header"
+                  class="button icon solid solo fa-arrow-up scrolly"
+                  >Continue</a
+                >
+              </li>
+            </ul>
+          </div>
+        </footer>
       </div>
 
       <!-- Copyright -->
@@ -302,5 +331,19 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <!--for scroll up button-->
+    <script>
+      document.addEventListener("scroll", function () {
+        const skillsSection = document.getElementById("scroll");
+        const scrollButton = document.getElementById("scrollButton");
+        const skillsOffset = skillsSection.offsetTop;
+
+        if (window.scrollY >= skillsOffset) {
+          scrollButton.style.display = "block"; // Show the button
+        } else {
+          scrollButton.style.display = "none"; // Hide the button
+        }
+      });
+    </script>
   </body>
 </html>
