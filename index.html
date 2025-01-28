@@ -197,17 +197,15 @@
 
       <!-- Footer -->
       <footer id="footer">
-		
-        <section ><br><br><br><br><br>
+        <section>
+          <br /><br /><br /><br /><br />
           <b>"Data will talk to you if you’re willing to listen." </b>
-		      <p>– Jim Bergeson</p>
+          <p>– Jim Bergeson</p>
         </section>
         <section class="split contact">
           <section class="alt">
             <h3>Address</h3>
-            <p>
-              Dortmunt, Germany
-            </p>
+            <p>Dortmunt, Germany</p>
           </section>
           <section>
             <h3>Phone</h3>
@@ -229,46 +227,58 @@
                 >
               </li>
               <li>
-              <a
-                href="https://github.com/amruthamanoharan"
-                class="icon brands fa-github"
-                target="_blank"
-                ><span class="label">GitHub</span></a
-              >
+                <a
+                  href="https://github.com/amruthamanoharan"
+                  class="icon brands fa-github"
+                  target="_blank"
+                  ><span class="label">GitHub</span></a
+                >
               </li>
             </ul>
           </section>
         </section>
       </footer>
-      
-      
-      <!-- Copyright -->
+
       <div id="copyright">
+        <!-- Copyright start -->
         <ul>
-          <li>&copy; Untitled</li>
-          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+          <li>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Amrutha Manoharan
+          </li>
+          <li>Design by <a href="https://html5up.net">HTML5 UP</a></li>
         </ul>
-        <!--scroll up arrow-->
+        <!-- Copyright end -->
+        <!--scroll up arrow start -->
         <div id="footer">
           <ul
-              id="scrollButton"
-              class="actions"
-              style="
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 1000;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                display: none; /* Hidden by default */
-              "
-            >
-              <li>
-                <a href="#header" class="button icon solid solo fa-arrow-up scrolly">Continue</a>
-              </li>
-            </ul>
+            id="scrollButton"
+            class="actions"
+            style="
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              z-index: 1000;
+              margin: 0;
+              padding: 0;
+              list-style: none;
+              display: none; /* Hidden by default */
+              color: bisque;
+            "
+          >
+            <li>
+              <a
+                href="#header"
+                class="button icon solid solo fa-arrow-up scrolly"
+                >Continue</a
+              >
+            </li>
+          </ul>
         </div>
+        <!--scroll up arrow end -->
       </div>
     </div>
 
@@ -280,18 +290,14 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  rel="stylesheet"
-/>
 
-    <!--for scroll up button-->
     <script>
+      // for scroll-up button
       document.addEventListener("scroll", function () {
         const skillsSection = document.getElementById("scroll");
         const scrollButton = document.getElementById("scrollButton");
         const skillsOffset = skillsSection.offsetTop;
-    
+
         if (window.scrollY >= skillsOffset) {
           scrollButton.style.display = "block"; // Show the button
         } else {
